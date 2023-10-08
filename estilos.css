@@ -1,0 +1,21 @@
+/* Color de fondo */
+.bg-custom {
+    background-color: #ebf2d3;
+}
+
+.text-custom {
+    color: #000;
+}
+
+/* Botones */
+
+.btn-custom-blue {
+    background-color: #a34d41; 
+    color: #fff; 
+}
+
+/* Barra de navegación
+.navbar-custom {
+    background-color: #3664a8;
+    color: #fff;
+} */
