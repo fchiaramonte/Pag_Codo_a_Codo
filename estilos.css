@@ -15,7 +15,8 @@ body {
 
 /* Color de fondo de la barra de nav */
 .bg-custom {
-    background-color: #a34d41 ;
+    background-color: #a34d41;
+    margin-block: 5px;
 }
 
 /* Color de las opciones de la barra de nav */
