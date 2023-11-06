@@ -70,7 +70,7 @@
               <a class="nav-link custom-text-color" href="enconstruccion.html">Novedades</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link custom-text-color" href="enconstruccion.html">Acerca de Quiara</a>
+              <a class="nav-link custom-text-color" href="acercadequiara.html">Acerca de Quiara</a>
             </li>
         </ul>
     </nav>
@@ -131,39 +131,43 @@
 </div>    
 <!-- Formulario -->
       <section class="formulario">
+        <h3 style="color: aliceblue;">Contacto</h3>
+        <h5 style="color: aliceblue;">Para comunicarte con Quiara completa el siguiente formulario</h5>
         <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInputDisabled" placeholder="name@example.com" disabled required>
+            <input type="email" class="form-control" id="emailInput" placeholder="name@example.com" required>
             <label for="floatingInputDisabled">Email</label>
           </div>
           <div class="form-floating mb-3">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextareaDisabled" disabled required></textarea>
+            <textarea class="form-control" placeholder="Leave a comment here" id="nameInput" required></textarea>
             <label for="floatingTextareaDisabled">Nombre</label>
           </div>
           <div class="form-floating mb-3">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2Disabled" style="height: 100px" disabled required></textarea>
+            <textarea class="form-control" placeholder="Leave a comment here" id="messageInput" style="height: 100px" required></textarea>
             <label for="floatingTextarea2Disabled">Mensaje</label>
           </div>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button class="btn btn-custom-blue" type="button">Enviar</button>
-            <button class="btn btn-custom-blue" type="button">Cancelar</button>
+            <button class="btn btn-custom-blue" type="button" id="sendButton">Enviar</button>
+            <button class="btn btn-custom-blue" type="button" id="cancelButton">Cancelar</button>
           </div>
       </section>
+<!-- Cartel de confirmación del email -->
 </main>
-    <footer>
-        <div class="redes">
-            <a href="https://www.facebook.com/">
-                <i class="fa-brands fa-square-facebook fa-fade fa-2xl" style="color: #f08677;"></i>
-            </a>
-            <a href="https://www.instagram.com/">
-                <i class="fa-brands fa-instagram fa-fade fa-2xl" style="color: #f08677;"></i>
-            </a>
-            <a href="https://web.whatsapp.com/">
-                <i class="fa-brands fa-square-whatsapp fa-fade fa-2xl" style="color: #f08677;"></i>
-            </a>
-        </div>
-        <p>&copy; 2023 Delicias de Quiara. Todos los derechos reservados.</p>
-    </footer>
+<footer>
+  <div class="redes">
+      <a href="https://www.facebook.com">
+          <i class="fab fa-facebook-square fa-2x" style="color: #f08677;"></i>
+      </a>
+      <a href="https://www.instagram.com">
+          <i class="fab fa-instagram fa-2x" style="color: #f08677;"></i>
+      </a>
+      <a href="https://web.whatsapp.com">
+          <i class="fab fa-whatsapp-square fa-2x" style="color: #f08677;"></i>
+      </a>
+  </div>
+  <p>&copy; 2023 Delicias de Quiara. Todos los derechos reservados.</p>
+</footer>
 
+<!-- Script -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 <!-- Función de los botones de la barra de nav -->
@@ -188,6 +192,37 @@
   boton.addEventListener("click", function() {
     window.open("recetas.html", "_blank");
   });
+</script>
+
+<!-- Funcionalidad de los botones del form -->
+<script>
+  const emailInput = document.getElementById('emailInput');
+  const nameInput = document.getElementById('nameInput');
+  const messageInput = document.getElementById('messageInput');
+  const sendButton = document.getElementById('sendButton');
+  const cancelButton = document.getElementById('cancelButton');
+
+// Boton enviar
+  sendButton.addEventListener('click', function() {
+    // Recopila los valores del formulario
+    const email = emailInput.value;
+    const name = nameInput.value;
+    const message = messageInput.value;
+
+    // Boton cancelar
+    emailInput.value = '';
+    nameInput.value = '';
+    messageInput.value = '';
+  });
+
+//  Funcionalidad de borrar del boton cancelar
+  cancelButton.addEventListener('click', function() {
+    // Restablece los valores del formulario
+    emailInput.value = '';
+    nameInput.value = '';
+    messageInput.value = '';
+  });
+
 </script>
 
 </body>
