@@ -52,3 +52,13 @@
     function redirectToRecetas() {
         window.location.href = 'recetasdulces.html'; 
     }
+
+        // <!-- Funcionalidad del botón de la card 2 -->
+        function redirectToRecetas2() {
+            window.location.href = 'recsaladas.html'; 
+        }
+
+            // <!-- Funcionalidad del botón de la card 3 -->
+    function redirectToRecetas3() {
+        window.location.href = 'recsaludables.html'; 
+    }
