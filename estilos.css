@@ -1,6 +1,51 @@
+/* Configuración para todo el site en general */
+.container {
+  position: relative;
+  text-align: right; 
+}   
+.cuadro_texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 5px;
+}
+h1 {
+  font-family: 'Autour One', sans-serif;
+}
+h2 {
+  font-family: 'Autour One', sans-serif;
+}
+h3 {
+  font-family: 'Autour One', sans-serif;
+}
+h4 {
+  font-family: 'Autour One', sans-serif;
+}
+h5 {
+  font-weight: bold;
+}
+body {
+  font-family: 'Titillium Web', sans-serif;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.carousel-image {
+max-height:800px; 
+width: auto; 
+}
+
+.contenido {
+max-width: 1500px; 
+margin: 0 auto; 
+padding: 0 20px; 
+text-align: justify;
+}
+
 /* Color de fondo de toda la página*/
 body {
-    background-color: #d9d9d9;
+    background-color: #e9e9e9;
 }
 
 .text-custom {
@@ -37,6 +82,7 @@ footer {
     flex-direction: column;
     align-items: center; 
     justify-content: center; 
+    margin-top: 20px;
   }
 
   /* Imagen en el encabezado */
@@ -53,3 +99,26 @@ footer {
     border-radius: 10px; 
     margin-block: 20px;
   }
+  
+  /* Img de las tarjetas de la página gral de recetas */
+  .col img {
+    height: 200px; 
+    width: auto;
+    object-fit: cover; 
+  }
+
+  /* Pág de recetas dulces - acordeón */
+  .accordion-item {
+    text-align: left; 
+    margin: 10px 0; 
+}
+
+/* Botones de los acordeones de las recetas */
+.accordion-item button {
+  background-color: #eebab3; 
+  color: black; 
+}
+.accordion-item button:focus,
+    .accordion-item button:active {
+        background-color: #f08677; 
+        color: black;

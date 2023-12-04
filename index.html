@@ -14,41 +14,6 @@
         <script src="https://kit.fontawesome.com/fae5ac15d7.js" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link rel="stylesheet" href="estilos.css">
-        <!-- Estilos con Bootstrap -->
-        <style>
-            .container {
-                position: relative;
-                text-align: right; 
-            }   
-            .cuadro_texto {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                padding: 20px;
-                border-radius: 5px;
-            }
-            h1 {
-                font-family: 'Autour One', sans-serif;
-            }
-            h2 {
-                font-family: 'Autour One', sans-serif;
-            }
-            h3 {
-                font-family: 'Autour One', sans-serif;
-            }
-            h4 {
-                font-family: 'Autour One', sans-serif;
-            }
-            h5 {
-                font-weight: bold;
-            }
-            body {
-                font-family: 'Titillium Web', sans-serif;
-                margin-left: 10px;
-                margin-right: 10px;
-            }
-        </style>
     </head>
 <body>
 <!-- Barra de navegación -->
@@ -91,15 +56,15 @@
     <section>
     <div class="card-group mb-4">
         <div class="card">
-          <img src="Fotos/images.jpg" class="card-img-top" alt="torta">
+          <img src="Fotos/images.jpg" class="img-thumbnail" alt="torta">
           <div class="card-body">
             <h5 class="card-title">Torta 100% Chocolate</h5>
             <p class="card-text">La torta 100% chocolate es un deleite supremo para los amantes del cacao. Su textura suave y sabor intenso te sumerge en un mundo de puro placer chocolatoso.</p>
-            <button id="verRcetasBoton" class="btn btn-custom-blue">Ver recetas</button>
+            <button id="verRecetasBoton" class="btn btn-custom-blue" onclick="redirectToRecetas()">Ver recetas</button>
           </div>
         </div>
         <div class="card">
-          <img src="Fotos/carnes 275x183.png" class="card-img-top" alt="carne">
+          <img src="Fotos/carnes 275x183.png" class="img-thumbnail" alt="carne">
           <div class="card-body">
             <h5 class="card-title">Amantes de la carne</h5>
             <p class="card-text">Las recetas categorizadas como "Amantes de la carne" son un festín para los paladares carnívoros. Jugosos filetes, asados ahumados y sabrosas preparaciones que satisfacen los deseos más carnívoros.</p>
@@ -107,11 +72,11 @@
           </div>
         </div>
         <div class="card">
-          <img src="Fotos/saludable 275x183.png" class="card-img-top" alt="frutas">
+          <img src="Fotos/saludable 275x183.png" class="img-thumbnail" alt="frutas">
           <div class="card-body">
             <h5 class="card-title">Merienda primaveral</h5>
             <p class="card-text">Las meriendas con avena y frutas son un equilibrio perfecto entre lo saludable y lo delicioso. Combina la nutrición de la avena con la frescura y dulzura de las frutas.</p>
-            <button class="btn btn-custom-blue">Ver recetas</button>
+            <button  class="btn btn-custom-blue">Ver recetas</button>
           </div> 
          </div>
       </div>
@@ -168,62 +133,7 @@
 </footer>
 
 <!-- Script -->
+<script src="todoslosscripts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
-<!-- Función de los botones de la barra de nav -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-      const links = document.querySelectorAll(".nav-link");
-
-      links.forEach(function (link) {
-          link.addEventListener("click", function (event) {
-              event.preventDefault(); 
-              const url = this.getAttribute("href");
-              window.location.href = url; 
-          });
-      });
-  });
-</script>
-
-<!-- Función del botón de la imagen del encabezado -->
-<script>
-  var boton = document.getElementById("todaslasrecetas");
-
-  boton.addEventListener("click", function() {
-    window.open("recetas.html", "_blank");
-  });
-</script>
-
-<!-- Funcionalidad de los botones del form -->
-<script>
-  const emailInput = document.getElementById('emailInput');
-  const nameInput = document.getElementById('nameInput');
-  const messageInput = document.getElementById('messageInput');
-  const sendButton = document.getElementById('sendButton');
-  const cancelButton = document.getElementById('cancelButton');
-
-// Boton enviar
-  sendButton.addEventListener('click', function() {
-    // Recopila los valores del formulario
-    const email = emailInput.value;
-    const name = nameInput.value;
-    const message = messageInput.value;
-
-    // Boton cancelar
-    emailInput.value = '';
-    nameInput.value = '';
-    messageInput.value = '';
-  });
-
-//  Funcionalidad de borrar del boton cancelar
-  cancelButton.addEventListener('click', function() {
-    // Restablece los valores del formulario
-    emailInput.value = '';
-    nameInput.value = '';
-    messageInput.value = '';
-  });
-
-</script>
-
 </body>
 </html> 
