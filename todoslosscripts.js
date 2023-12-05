@@ -62,3 +62,9 @@
     function redirectToRecetas3() {
         window.location.href = 'recsaludables.html'; 
     }
+
+// PÁGINA DE NOVEDADES
+            // <!-- Funcionalidad del botón de la card 3 -->
+            function redirectToNovedades() {
+                window.location.href = 'novedades.html'; 
+            }
